@@ -1,0 +1,2 @@
+# amato
+Profesiniu mokyklu versliukai

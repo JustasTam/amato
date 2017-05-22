@@ -1,0 +1,25 @@
+<div class="menu">
+	<div class="nav">
+		<div class="nav-elements">
+			<ul>
+				<li><a href='#'>Isiminti profiliai</a></li>
+				<li><a href='#'>Paieskos istorija</a></li>
+				<li><a href='#'>Zinutes</a></li>
+				<li><a href='#'>Vertinimas</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="logo-n-search">
+		<div class="logo-container">
+			<div class="logo">
+				<%= link_to image_tag('menu/logo.png'), {action: 'index', controller: 'welcome'} %>
+			</div>
+		</div>
+		<div class="search-container">
+			<div class="search">
+				<!-- <%= image_tag 'menu/search-icon.png' %> -->
+				<input type="text" name="search" placeholder="Search..">
+			</div>
+		</div>
+	</div>
+</div>

@@ -15,10 +15,21 @@
   margin: 40px 20px;
 }
 
-.students-row {
-
-}
-
 .schools-row {
 	margin: -30px 20px;
+}
+
+.students {
+	border: red solid;
+	height: 100%;
+	width: 70%;
+	margin: 20px 0 20px 25%;
+}
+
+.student {
+	height: 150px;
+	width: 16%;
+	border: black solid;
+	padding: 20px;
+	float:left;
 }

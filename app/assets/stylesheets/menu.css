@@ -76,7 +76,7 @@
 .search input {
 	position: absolute;
 	color: #E3E4E5;
-	width: 100%;
+	width: 60%;
 	height: 40px;
 	bottom: 20px;
 	border: transparent;
@@ -90,8 +90,12 @@
   border-bottom: #FFFFFF;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
+
+	-webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
 }
 
 .search input:focus {
 	outline: none;
+	width: 100%;
 }

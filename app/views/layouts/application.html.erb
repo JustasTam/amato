@@ -12,7 +12,10 @@
   <body>
   	<div class="main">
 	  	<%= render 'partials/menu' %>
-	    <%= yield %>
+	  	<div class="container">
+				<%= render 'partials/submenu' %>
+	    	<%= yield %>
+	    </div>
 	  </div>
   </body>
 </html>

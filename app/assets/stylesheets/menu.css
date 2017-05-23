@@ -1,12 +1,15 @@
 .menu {
 	width: 100%;
-	height: 200px;
-	background-color: #141722;
+	height: 19vh;
+	border-bottom: #FFFFFF;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
 }
 
 .nav {
-	height: 40%;
+	height: 30%;
 	border: #FFFFFF;
+	position: relative;
 }
 
 .logo-n-search {
@@ -15,10 +18,6 @@
 	border-top: #FFFFFF;
 	border-top-style: solid;
 	border-top-width: 1px;
-	position: relative;
-}
-
-.nav {
 	position: relative;
 }
 
@@ -40,6 +39,7 @@
 
 .nav-elements a {
   text-decoration: none;
+  color: #E3E4E5;
 }
 
 .logo-container {
@@ -64,7 +64,7 @@
 
 .search-container {
 	position: absolute;
-	height: 100%;
+	height: 120%;
 	width: 55%;
 	right: 150px;
 }

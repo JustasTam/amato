@@ -6,8 +6,8 @@
 				<li><a href='#'>PAIESKOS ISTORIJA</a></li>
 				<li><a href='#'>ZINUTES</a></li>
 				<li><a href='#'>VERTINIMAS</a></li>
-				<li class="pop-up-text"><a href='#'>PRISIJUNGTI</a></li>
-				<li class="pop-up-text"><a href='#'>REGISTRUOTIS</a></li>
+				<li class="pop-up-text"><a href='#' id="log-pop">PRISIJUNGTI</a></li>
+				<li class="pop-up-text"><a href='#' id="reg-pop">REGISTRUOTIS</a></li>
 			</ul>
 		</div>
 		<span class="popup-button login-button"><%= image_tag('pop-up-icon.png') %></span>
@@ -27,3 +27,19 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+$(function() {
+	$('#log-pop').hover(function() {
+		$('.login-button').children().css('height', '75px');
+  }, function() {
+    $('.login-button').children().css('height', '60px');
+  });
+
+  $('#reg-pop').hover(function() {
+		$('.reg-button').children().css('height', '75px');
+  }, function() {
+    $('.reg-button').children().css('height', '60px');
+  });
+ });
+</script>

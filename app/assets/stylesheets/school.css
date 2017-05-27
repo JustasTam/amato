@@ -1,0 +1,54 @@
+.school-profile-img {
+	height: 75%;
+	width: 20%;
+	margin-top: 30px;
+	background-image: url(school-icon.png);
+	background-size: 100% 100%;
+	float: left;
+}
+
+.student {
+	margin-right: 5px !important;
+}
+
+.student-stars {
+	z-index: 100000;
+	height: 30px;
+	width: 30px;
+	margin-top: -40px; 
+	margin-left: 172px;
+	position: absolute;
+	background-image: url('star.png');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+
+}
+
+.student-stars p {
+  color: #ad9f01;
+  font-size: 15px;
+  margin-top: 7px;
+  margin-left: 11px;
+}
+
+.student-hover {
+	/*display: none;
+	visibility: hidden;*/
+	height: 210px;
+	width: 350px;
+	z-index: 1000000;
+	position: absolute;
+	margin-top: -300px;
+	margin-left: 100px;
+	background: #FFFFFF;
+}
+
+.student-fixes li {
+  height: 0 !important; 
+  margin-top: 0 !important; 
+  padding-top: 35px !important;
+}
+
+.student-star-fixes {
+	margin-left: -10px !important;
+}

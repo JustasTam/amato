@@ -1,5 +1,5 @@
 class UserController < ApplicationController
   def index
-  	@submenu_active_icon = true
+  	@submenu_stroikes_icon = true
   end
 end

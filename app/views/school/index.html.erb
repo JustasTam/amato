@@ -1,0 +1,145 @@
+<div class="outer-row">
+	<div class="row">
+		<div class="el-field">
+			<div class="school-profile-img"></div>
+			<div class="profile-info">
+				<ul>
+					<li>Profesine mokykla</li>
+					<li>Tel. numeris</li>
+					<li>El. pastas</li>
+					<li>Adresas</li>
+					<li><a href="#">Tinklapis</a></li>
+				</ul>
+			</div>
+			<div class="profile-description">
+				<p>Gabumai; paslauga; veiklos aprašymas</p>
+			</div>
+			<div class="profile-stars">
+				<ul class="stars-ul">
+					<li><%= image_tag 'star-blank.png' %></li>
+					<li><%= image_tag 'star-blank.png' %></li>
+					<li><%= image_tag 'star.png' %></li>
+					<li><%= image_tag 'star.png' %></li>
+					<li><%= image_tag 'star.png' %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row schools-row">
+		<div class="el-field">
+			<div class="albums">
+				<ul>
+					<li><%= image_tag 'album.png' %></li>
+					<li class="student" style="margin-left: -40px;" id="student-1">
+						<%= link_to image_tag('avatar.png'), user_path %>
+						<div class="student-stars"><p>5</p></div>
+						<div class="student-hover" id="student-popup-1">
+
+							<div class="upper-block">
+							<div class="user-avatar">
+								<%= link_to image_tag('avatar.png'), user_path %>
+							</div>
+							<div class="user-info student-fixes">
+								<ul>
+									<li style="padding-top: 0 !important">Vardenis Pavardenis</li>
+									<div class="hashtags">
+										<li>Profesine mokykla</li>
+										<li>Automechanika</li>
+									</div>
+								</ul>
+							</div>
+							<div class="hover-stars student-star-fixes">
+								<%= image_tag 'star.png' %>
+								<%= image_tag 'star.png' %>
+								<%= image_tag 'star.png' %>
+								<%= image_tag 'star.png' %>
+								<%= image_tag 'star.png' %>
+							</div>
+						</div>
+						
+						</div>
+					</li>
+					<li class="student" id="student-2">
+						<%= link_to image_tag('avatar.png'), user_path %>
+						<div class="student-stars"><p>4</p></div>
+						<div class="student-hover" id="student-popup-2">
+
+							<div class="upper-block">
+							<div class="user-avatar">
+								<%= link_to image_tag('avatar.png'), user_path %>
+							</div>
+							<div class="user-info student-fixes">
+								<ul>
+									<li style="padding-top: 0 !important">Vardenis Pavardenis</li>
+									<div class="hashtags">
+										<li>Profesine mokykla</li>
+										<li>Automechanika</li>
+									</div>
+								</ul>
+							</div>
+							<div class="hover-stars student-star-fixes">
+								<%= image_tag 'star-blank.png' %>
+								<%= image_tag 'star.png' %>
+								<%= image_tag 'star.png' %>
+								<%= image_tag 'star.png' %>
+								<%= image_tag 'star.png' %>
+							</div>
+						</div>
+						
+						</div>
+					</li>
+					<li class="student" id="student-3">
+						<%= link_to image_tag('avatar.png'), user_path %>
+						<div class="student-stars"><p>3</p></div>
+						<div class="student-hover" id="student-popup-3">
+
+							<div class="upper-block">
+							<div class="user-avatar">
+								<%= link_to image_tag('avatar.png'), user_path %>
+							</div>
+							<div class="user-info student-fixes">
+								<ul>
+									<li style="padding-top: 0 !important">Vardenis Pavardenis</li>
+									<div class="hashtags">
+										<li>Profesine mokykla</li>
+										<li>Automechanika</li>
+									</div>
+								</ul>
+							</div>
+							<div class="hover-stars student-star-fixes">
+								<%= image_tag 'star-blank.png' %>
+								<%= image_tag 'star-blank.png' %>
+								<%= image_tag 'star.png' %>
+								<%= image_tag 'star.png' %>
+								<%= image_tag 'star.png' %>
+							</div>
+						</div>
+						
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+	displayNoneStudent();
+
+	$('#student-1').hover(function() {$('#student-popup-1').css('display', 'block'); }, displayNoneStudent );
+	$('#student-2').hover(function() {$('#student-popup-2').css('display', 'block'); }, displayNoneStudent );
+	$('#student-3').hover(function() {displayBackvards($('#student-popup-3'),'-250px');}, displayNoneStudent );
+
+	function displayNoneStudent(){
+		$('#student-popup-1').css('display', 'none');
+		$('#student-popup-2').css('display', 'none');
+		$('#student-popup-3').css('display', 'none');
+	};
+
+	function displayBackvards(el, pix){
+		el.css('display', 'block');
+		el.css('margin-left', pix);
+	};
+});
+</script>

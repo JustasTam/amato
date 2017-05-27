@@ -6,5 +6,6 @@ body {
 
 .container {
 	min-height: 500px;
+	min-width: 1080px;
 	margin-top: -20px;
 }

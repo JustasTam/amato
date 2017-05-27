@@ -32,8 +32,15 @@
 
 .submenu-elements img {
 	height: 70px;
-    position: relative;
-    top: 60%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+  position: relative;
+  top: 60%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media all and (max-width: 1080px) {
+	.submenu-container{
+    margin-left: 0px;
+    left: 130px;
+  }
 }

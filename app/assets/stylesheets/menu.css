@@ -14,17 +14,19 @@
 }
 
 .logo-n-search {
-	margin-top: -7px;
+	margin-top: 0;
 	height: 60%;
-	border-top: #FFFFFF;
+/*	border-top: #FFFFFF;
 	border-top-style: solid;
-	border-top-width: 1px;
+	border-top-width: 1px;*/
 	position: relative;
+	min-width: 1080px;
 }
 
 .nav-elements {
 	position: absolute;
   bottom: 0;
+  top: 0;
   right: 100px;
 }
 
@@ -36,12 +38,34 @@
 	color: #E3E4E5;
 	padding: 0 20px 0 20px;
 	display: inline;
+	margin-top: 10px;
 }
 
 .nav-elements a {
   text-decoration: none;
   font-size: 11px;
   color: #E3E4E5;
+}
+
+.pop-up-text a {
+	z-index: 9001;
+	color: #141722;
+	position: relative;
+}
+
+.popup-button img {
+	z-index: 9000;
+  width: 105px;
+  height: 60px;
+  position: absolute;
+}
+
+.login-button img {
+	right: 220px;
+}
+
+.reg-button img {
+	right: 105px;
 }
 
 .logo-container {

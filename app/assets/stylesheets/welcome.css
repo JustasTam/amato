@@ -107,11 +107,11 @@
 }
 
 .hover-stars {
-	height: 28px;
-	width: 99%;
+	height: 25px;
+	width: 50%;
 	bottom: 0;
 	position: absolute;
-	padding: 0 0 12px 10px;
+	padding: 0 0 12px 13px;
 }
 
 .hover-stars img {
@@ -172,6 +172,10 @@
   background-image: url('star.png');
   background-size:100% auto;
   text-align: center;
+}
+
+.zero-stars {
+	background-image: url('star-blank.png') !important;
 }
 
 .star-number {

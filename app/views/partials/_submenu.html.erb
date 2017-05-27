@@ -5,7 +5,9 @@
 				<a href="#"><%= image_tag 'submenu/clothes.png', style: 'height: 35px; left: 33%;'%></a>
 			</li>
 			<li>
-				<a href="#"><%= image_tag 'submenu/stroikes.png', style: 'height: 40px; left: 33%;' %></a>
+				<a href="#">
+					<%= image_tag @submenu_active_icon ? 'submenu/stroikes-active.png' : 'submenu/stroikes.png', style: 'height: 40px; left: 33%;' %>
+					</a>
 			</li>
 			<li>
 				<a href="#"><%= image_tag 'submenu/hair.png', style: 'height: 40px; left: 37%;' %></a>

@@ -91,6 +91,10 @@
 	max-height: 100%;
 	max-width: 100%;
 }
+
+.more-width {
+	width: 71% !important;
+}
 /*
 .el-field {
 	border: black solid;

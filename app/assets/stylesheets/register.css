@@ -1,0 +1,149 @@
+/* Registration */
+
+#reg-banner img {
+	display: none;
+	height: 650px;
+	z-index: 9000;
+  width: 105px;
+  position: absolute;
+  right: 105px;
+}
+
+#reg-block {
+	height: 550px;
+	width: 0;
+	background-color: #FFFFFF;
+	position: absolute;
+	z-index: 9000;
+	right: 210px;
+	top: 50px;
+}
+
+#suspend-reg {
+	display: none;
+	background-color: black;
+	opacity: 0.6;
+	position: absolute;
+	z-index: 5000;
+	height: 100vh;
+	width: 100%;
+}
+
+.reg-inputs {
+	margin: 30px 30px 30px 50px;
+	height: 90%;
+	width: 90%;
+}
+
+.reg-inputs input {
+	width: 200px;
+	height: 30px;
+	color: #141722;
+	border: transparent;
+	font-size: 15px;
+	border-bottom: #BDD6C2;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	margin-bottom: -10px;
+}
+
+.reg-inputs input {
+	outline: none;
+}
+
+.reg-inputs p {
+	color: #BDD6C2;
+	font-size: 13px;
+	margin-bottom: 3px;
+}
+
+.reg-inputs button {
+	background-color: #BDD6C2;
+	width: 200px;
+  color: #FFFFFF;
+  border:1px solid #CCC;
+  background: #BCD0C5;
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+  cursor:pointer;
+  vertical-align:middle;
+  padding: 5px;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 11px;
+  height: 30px;
+}
+
+.reg-inputs button:active {
+  color: #BCD0C5;
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+.reg-inputs select {
+	background-color: #BDD6C2;
+	width: 200px;
+  color: #FFFFFF;
+  border:1px solid #CCC;
+  background: #BCD0C5;
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+  cursor:pointer;
+  vertical-align:middle;
+  padding: 5px;
+  text-align: center;
+  margin-top: 20px;
+  text-align-last:center;
+}
+
+.user-inputs {
+	display: block;
+	height: 350px;
+}
+
+.school-inputs {
+	display: none;
+	height: 350px;
+	overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-right: 50px;
+}
+
+.student-inputs {
+	display: none;
+  height: 350px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-right: 50px;
+}
+
+.pretty-scrollbar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.pretty-scrollbar::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.pretty-scrollbar::-webkit-scrollbar-thumb
+{
+	background-color: #BCD0C5;	
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+.pencil img {
+	height: 13px;
+  width: 64px;
+  margin-left: 65px;
+  margin-top: 10px;
+}

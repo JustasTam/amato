@@ -1,4 +1,5 @@
-<div id="suspend"></div>
+<div id="suspend-log"></div>
+<div id="suspend-reg"></div>
 
 <div class="menu">
 	<div class="nav">
@@ -30,6 +31,102 @@
 		</div>
 
 		<span class="popup-button reg-button"><%= image_tag('pop-up-icon.png') %></span>
+		<div class="reg-field">
+			<div id="reg-banner">
+				<%= image_tag('login/banner.png') %>
+			</div>
+			<div id="reg-block">
+				<div class="reg-inputs">
+
+					<select>
+					  <option value="user">VARTOTOJAS</option>
+					  <option value="student">STUDENTAS</option>
+					  <option value="school">MOKYKLA</option>
+					</select>
+					<div class="pencil">
+						<%= image_tag('login/pencil.png') %>
+					</div>
+
+					<div class="user-inputs">
+						<input type="text" name="reg" >
+						<p>Vardas*</p>
+						<input type="text" name="reg" >
+						<p>Pavarde*</p>
+						<input type="text" name="reg" >
+						<p>Miestas*</p>
+						<input type="text" name="reg" >
+						<p>Prisijungimo vardas</p>
+						<input type="text" name="password" >
+						<p>Slaptazodis</p>						
+						<input type="text" name="password" >
+						<p>Pakartokite slaptazodi</p>
+					</div>
+
+					<div class="student-inputs pretty-scrollbar">
+						<input type="text" name="reg" >
+						<p>Vardas*</p>
+						<input type="text" name="reg" >
+						<p>Pavarde*</p>
+						<input type="text" name="reg" >
+						<p>Miestas*</p>
+						<input type="text" name="reg" >
+						<p>Adresas*</p>						
+						<input type="text" name="reg" >
+						<p>Prisijungimo vardas</p>
+						<input type="text" name="password" >
+						<p>Slaptazodis</p>						
+						<input type="text" name="password" >
+						<p>Pakartokite slaptazodi</p>
+						<select>
+						  <option>Mokykla 1</option>
+						  <option>Mokykla 2</option>
+						  <option>Mokykla 3</option>
+						  <option>Mokykla 4</option>
+						  <option>Mokykla 5</option>
+						</select>
+						<select>
+						  <option>Siuvimas</option>
+						  <option>Automechanika</option>
+						  <option>Elektronika</option>
+						  <option>Finansai</option>
+						  <option>Keramika</option>
+						  <option>Dizainas</option>
+						</select>						
+						<select>
+						  <option>1 kursas</option>
+						  <option>2 kursas</option>
+						  <option>3 kursas</option>
+						  <option>4 kursas</option>
+						</select>
+						<input type="text" name="reg" >
+						<p>Telefono numeris*</p>
+						<input type="text" name="reg" >
+						<p>Elektroninis pastas*</p>
+					</div>
+
+					<div class="school-inputs pretty-scrollbar">
+						<input type="text" name="reg" >
+						<p>Pavadinimas*</p>
+						<input type="text" name="reg" >
+						<p>Telefono numeris*</p>
+						<input type="text" name="reg" >
+						<p>Elektroninis pastas*</p>
+						<input type="text" name="reg" >
+						<p>Adresas</p>
+						<input type="text" name="reg" >
+						<p>Tinklapis</p>						
+						<input type="text" name="reg" >
+						<p>Prisijungimo vardas</p>
+						<input type="text" name="password" >
+						<p>Slaptazodis</p>						
+						<input type="text" name="password" >
+						<p>Pakartokite slaptazodi</p>
+					</div>
+
+					<button type="button">PATVIRTINTI REGISTRACIJA</button>
+				</div>
+			</div>
+		</div>
 
 	</div>
 	<div class="logo-n-search">
@@ -67,7 +164,7 @@ $(function() {
   $("#login-block").children().hide(); 
 
   $('#log-pop').click(function() { 
-  	$('#suspend').css('display', 'block');
+  	$('#suspend-log').css('display', 'block');
   	$('#login-banner').children().slideToggle("slow");
 
   	setTimeout(function(){
@@ -75,18 +172,67 @@ $(function() {
   		$("#login-block").children().show(); 
 		}, 500);
   });
-  // login end <--
 
-  $('#suspend').click(function() { 
+  $('#suspend-log').click(function() { 
   	$('#login-block').animate({width: '0'}, "slow");
   	setTimeout(function(){
 		  $('#login-banner').children().slideToggle("slow");
 		  $("#login-block").children().hide();
 			setTimeout(function(){
-				$('#suspend').css('display', 'none');
+				$('#suspend-log').css('display', 'none');
 			}, 500);
 		}, 500);
   });
+  // login end <--
+
+  // reg start -->
+  $("#reg-block").children().hide(); 
+
+  $('#reg-pop').click(function() { 
+  	$('#suspend-reg').css('display', 'block');
+  	$('#reg-banner').children().slideToggle("slow");
+
+  	setTimeout(function(){
+		  $('#reg-block').animate({width: '300px'}, "slow");
+  		$("#reg-block").children().show(); 
+		}, 500);
+  });
+
+  $('#suspend-reg').click(function() { 
+  	$('#reg-block').animate({width: '0'}, "slow");
+  	setTimeout(function(){
+		  $('#reg-banner').children().slideToggle("slow");
+		  $("#reg-block").children().hide();
+			setTimeout(function(){
+				$('#suspend-reg').css('display', 'none');
+			}, 500);
+		}, 500);
+  });
+
+  // if ($('.reg-inputs').find( "select" ).val() === 'user') {
+  // 	$('.reg-inputs').css('display', 'block');
+  // }
+
+  $('.reg-inputs').find("select").change(function() {
+  	switch($('.reg-inputs').find( "select" ).val()) {
+    case 'user':
+        $('.user-inputs').css('display', 'block'); //show
+        $('.student-inputs').css('display', 'none');
+        $('.school-inputs').css('display', 'none');
+        break;
+    case 'student':
+        $('.user-inputs').css('display', 'none');
+        $('.student-inputs').css('display', 'block'); //show
+        $('.school-inputs').css('display', 'none'); 
+        break;
+    case 'school':
+    		$('.user-inputs').css('display', 'none');
+    		$('.student-inputs').css('display', 'none');
+    		$('.school-inputs').css('display', 'block'); //show
+    		break;
+		}
+  });
+  // reg end <--
 
  });
 </script>

@@ -4,9 +4,9 @@
 	display: none;
 	height: 650px;
 	z-index: 9000;
-  width: 105px;
+  width: 110px;
   position: absolute;
-  right: 105px;
+  right: 109px;
 }
 
 #reg-block {
@@ -15,7 +15,7 @@
 	background-color: #FFFFFF;
 	position: absolute;
 	z-index: 9000;
-	right: 210px;
+	right: 219px;
 	top: 50px;
 }
 

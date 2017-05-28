@@ -1,0 +1,81 @@
+#school-admin-row{
+	display: none;
+	height: 520px;
+}
+
+.max-height {
+	height: 100% !important;
+}
+
+.table {
+  height: 90%;
+  width: 90%;
+  overflow-y: scroll;
+  border: red solid;
+  margin-top: 25px;
+  border-style: thick;
+  border-width: 1px;
+  border-color: #141722;
+}
+
+.table ul {
+	list-style-type: none;
+	display: inline-block;
+  padding: 0;
+  margin: 0;
+  height: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.table-elem {
+	height: 100%;
+	width: 100px;
+	display: inline;
+	border-style: solid;
+  border-width: 1px;
+  border-color: #141722;
+  float: left;
+  border-top: none;
+  border-left: none;
+}
+
+.topic.table-elem{
+	text-align: center;
+}
+
+.table-elem img {
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+
+.table-elem p {
+	padding: 0;
+	margin-top: 6px;
+}
+
+.big {
+	width: 200px;
+}
+
+.mid {
+	width: 123px;
+}
+
+.small {
+	width: 70px;
+}
+
+.small p {
+	text-align: center;
+}
+
+.very-small {
+	width: 35px;
+	border-color: transparent;
+}
+
+.no-bot {
+	border-bottom: none;
+}

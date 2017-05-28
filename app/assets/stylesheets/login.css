@@ -4,9 +4,9 @@
 	display: none;
 	height: 350px;
 	z-index: 9000;
-  width: 105px;
+  width: 110px;
   position: absolute;
-  right: 220px;
+  right: 233px;
 }
 
 #login-block {
@@ -14,7 +14,7 @@
 	background-color: #FFFFFF;
 	position: absolute;
 	z-index: 9000;
-	right: 325px;
+	right: 343px;
 	top: 50px;
 }
 

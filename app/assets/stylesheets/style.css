@@ -4,6 +4,10 @@ body {
 	height: 100vh;
 }
 
+* {
+  font-family: Calibri, sans-serif;
+}
+
 .container {
 	min-height: 500px;
 	min-width: 1080px;

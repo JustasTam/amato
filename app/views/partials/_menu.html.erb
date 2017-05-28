@@ -221,6 +221,10 @@ $(function() {
   $("#login-block").children().hide(); 
 
   $('#log-pop').click(function() { 
+  	if ($('.reg-inputs').is(':visible')) {
+  		closeReg();
+  	}
+
   	$('#suspend-log').css('display', 'block');
   	$('#login-banner').children().slideToggle("slow");
 
@@ -250,16 +254,23 @@ $(function() {
   $("#reg-block").children().hide(); 
 
   $('#reg-pop').click(function() { 
+	  if ($('.login-inputs').is(':visible')) {
+			closeLogin();
+		}
   	$('#suspend-reg').css('display', 'block');
   	$('#reg-banner').children().slideToggle("slow");
 
   	setTimeout(function(){
-		  $('#reg-block').animate({width: '300px'}, "slow");
+		$('#reg-block').animate({width: '300px'}, "slow");
   		$("#reg-block").children().show(); 
 		}, 500);
   });
 
   $('#suspend-reg').click(function() { 
+  	closeReg();
+  });
+
+  function closeReg(){
   	$('#reg-block').animate({width: '0'}, "slow");
   	setTimeout(function(){
 		  $('#reg-banner').children().slideToggle("slow");
@@ -268,7 +279,7 @@ $(function() {
 				$('#suspend-reg').css('display', 'none');
 			}, 500);
 		}, 500);
-  });
+  }
 
   // if ($('.reg-inputs').find( "select" ).val() === 'user') {
   // 	$('.reg-inputs').css('display', 'block');

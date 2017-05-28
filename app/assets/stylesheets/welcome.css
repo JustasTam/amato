@@ -195,28 +195,58 @@
   font-size: 13px;
 }
 
-/*.stars {
-	padding: 0 0 0 0;
-	display:inline-block;
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -5px;
-}*/
-
-/*.stars img {
-	display: inline;
-	max-width: 20px;
-	max-height: 20px;
-	text-align: center;
-}*/
-
 .school-container {
 	height: 70%;
-	width: 20%;
+	width: 194px;
 	margin-top: 40px;
 
 	display:inline-block;
 	position: relative;
 	margin-right: 20px;
+}
+
+#student-more {
+  height: 11px;
+  width: 22px;
+  position: absolute;
+  margin-top: -23px;
+  left: 57%;
+}
+
+#student-more img {
+	height: 100%;
+	width: 100%;
+  cursor: hand;
+  cursor: pointer;
+  /*transform: rotate(180deg);*/
+}
+
+#student-elements {
+	display: none;
+	margin-top: -30px;
+}
+
+.scrollbar-color::-webkit-scrollbar-thumb {
+	background-color: #141722;	
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+#school-more {
+	height: 11px;
+  width: 22px;
+  position: absolute;
+  margin-top: -270px;
+  left: 57%;
+}
+
+#school-more img {
+	height: 100%;
+	width: 100%;
+  cursor: hand;
+  cursor: pointer;
+  transform: rotate(180deg);
 }

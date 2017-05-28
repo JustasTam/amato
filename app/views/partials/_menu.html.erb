@@ -1,144 +1,178 @@
-<div id="suspend-log"></div>
-<div id="suspend-reg"></div>
+<div id="offline">
+	<div id="suspend-log"></div>
+	<div id="suspend-reg"></div>
 
-<div class="menu">
-	<div class="nav">
-		<div class="nav-elements">
-			<ul>
-				<!-- <li><a href='#'>ISIMINTI PROFILIAI</a></li>
-				<li><a href='#'>PAIESKOS ISTORIJA</a></li>
-				<li><a href='#'>ZINUTES</a></li>
-				<li><a href='#'>VERTINIMAS</a></li> -->
-				<li class="pop-up-text"><a id="log-pop">PRISIJUNGTI</a></li>
-				<li class="pop-up-text"><a id="reg-pop">REGISTRUOTIS</a></li>
-			</ul>
-		</div>
-
-		<span class="popup-button login-button"><%= image_tag('pop-up-icon.png') %></span>
-		<div class="login-field">
-			<div id="login-banner">
-				<%= image_tag('login/banner.png') %>
+	<div class="menu">
+		<div class="nav">
+			<div class="nav-elements">
+				<ul>
+					<!-- <li><a href='#'>ISIMINTI PROFILIAI</a></li>
+					<li><a href='#'>PAIESKOS ISTORIJA</a></li>
+					<li><a href='#'>ZINUTES</a></li>
+					<li><a href='#'>VERTINIMAS</a></li> -->
+					<li class="pop-up-text"><a id="log-pop">PRISIJUNGTI</a></li>
+					<li class="pop-up-text"><a id="reg-pop">REGISTRUOTIS</a></li>
+				</ul>
 			</div>
-			<div id="login-block">
-				<div class="login-inputs">
-					<input type="text" name="login" >
-					<p>Prisijungimo vardas</p>
-					<input type="text" name="password" >
-					<p>Slaptazodis</p>
-					<button type="button">Prisijungti!</button>
+
+			<span class="popup-button login-button"><%= image_tag('pop-up-icon.png') %></span>
+			<div class="login-field">
+				<div id="login-banner">
+					<%= image_tag('login/banner.png') %>
+				</div>
+				<div id="login-block">
+					<div class="login-inputs">
+						<input type="text" name="login" >
+						<p>Prisijungimo vardas</p>
+						<input type="text" name="password" >
+						<p>Slaptazodis</p>
+						<button type="button" id="log-in">Prisijungti!</button>
+					</div>
+				</div>
+			</div>
+
+			<span class="popup-button reg-button"><%= image_tag('pop-up-icon.png') %></span>
+			<div class="reg-field">
+				<div id="reg-banner">
+					<%= image_tag('login/banner.png') %>
+				</div>
+				<div id="reg-block">
+					<div class="reg-inputs">
+
+						<select>
+						  <option value="user">VARTOTOJAS</option>
+						  <option value="student">STUDENTAS</option>
+						  <option value="school">MOKYKLA</option>
+						</select>
+						<div class="pencil">
+							<%= image_tag('login/pencil.png') %>
+						</div>
+
+						<div class="user-inputs">
+							<input type="text" name="reg" >
+							<p>Vardas*</p>
+							<input type="text" name="reg" >
+							<p>Pavarde*</p>
+							<input type="text" name="reg" >
+							<p>Miestas*</p>
+							<input type="text" name="reg" >
+							<p>Prisijungimo vardas</p>
+							<input type="text" name="password" >
+							<p>Slaptazodis</p>						
+							<input type="text" name="password" >
+							<p>Pakartokite slaptazodi</p>
+						</div>
+
+						<div class="student-inputs pretty-scrollbar">
+							<input type="text" name="reg" >
+							<p>Vardas*</p>
+							<input type="text" name="reg" >
+							<p>Pavarde*</p>
+							<input type="text" name="reg" >
+							<p>Miestas*</p>
+							<input type="text" name="reg" >
+							<p>Adresas*</p>						
+							<input type="text" name="reg" >
+							<p>Prisijungimo vardas</p>
+							<input type="text" name="password" >
+							<p>Slaptazodis</p>						
+							<input type="text" name="password" >
+							<p>Pakartokite slaptazodi</p>
+							<select>
+							  <option>Mokykla 1</option>
+							  <option>Mokykla 2</option>
+							  <option>Mokykla 3</option>
+							  <option>Mokykla 4</option>
+							  <option>Mokykla 5</option>
+							</select>
+							<select>
+							  <option>Siuvimas</option>
+							  <option>Automechanika</option>
+							  <option>Elektronika</option>
+							  <option>Finansai</option>
+							  <option>Keramika</option>
+							  <option>Dizainas</option>
+							</select>						
+							<select>
+							  <option>1 kursas</option>
+							  <option>2 kursas</option>
+							  <option>3 kursas</option>
+							  <option>4 kursas</option>
+							</select>
+							<input type="text" name="reg" >
+							<p>Telefono numeris*</p>
+							<input type="text" name="reg" >
+							<p>Elektroninis pastas*</p>
+						</div>
+
+						<div class="school-inputs pretty-scrollbar">
+							<input type="text" name="reg" >
+							<p>Pavadinimas*</p>
+							<input type="text" name="reg" >
+							<p>Telefono numeris*</p>
+							<input type="text" name="reg" >
+							<p>Elektroninis pastas*</p>
+							<input type="text" name="reg" >
+							<p>Adresas</p>
+							<input type="text" name="reg" >
+							<p>Tinklapis</p>						
+							<input type="text" name="reg" >
+							<p>Prisijungimo vardas</p>
+							<input type="text" name="password" >
+							<p>Slaptazodis</p>						
+							<input type="text" name="password" >
+							<p>Pakartokite slaptazodi</p>
+						</div>
+
+						<button type="button" id="confirm">PATVIRTINTI REGISTRACIJA</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="logo-n-search">
+			<div class="logo-container">
+				<div class="logo">
+					<%= link_to image_tag('menu/logo.png'), {action: 'index', controller: 'welcome'} %>
+				</div>
+			</div>
+			<div class="search-container">
+				<div class="search">
+					<!-- <%= image_tag 'menu/search-icon.png' %> -->
+					<input type="text" name="search" placeholder="Search..">
 				</div>
 			</div>
 		</div>
-
-		<span class="popup-button reg-button"><%= image_tag('pop-up-icon.png') %></span>
-		<div class="reg-field">
-			<div id="reg-banner">
-				<%= image_tag('login/banner.png') %>
-			</div>
-			<div id="reg-block">
-				<div class="reg-inputs">
-
-					<select>
-					  <option value="user">VARTOTOJAS</option>
-					  <option value="student">STUDENTAS</option>
-					  <option value="school">MOKYKLA</option>
-					</select>
-					<div class="pencil">
-						<%= image_tag('login/pencil.png') %>
-					</div>
-
-					<div class="user-inputs">
-						<input type="text" name="reg" >
-						<p>Vardas*</p>
-						<input type="text" name="reg" >
-						<p>Pavarde*</p>
-						<input type="text" name="reg" >
-						<p>Miestas*</p>
-						<input type="text" name="reg" >
-						<p>Prisijungimo vardas</p>
-						<input type="text" name="password" >
-						<p>Slaptazodis</p>						
-						<input type="text" name="password" >
-						<p>Pakartokite slaptazodi</p>
-					</div>
-
-					<div class="student-inputs pretty-scrollbar">
-						<input type="text" name="reg" >
-						<p>Vardas*</p>
-						<input type="text" name="reg" >
-						<p>Pavarde*</p>
-						<input type="text" name="reg" >
-						<p>Miestas*</p>
-						<input type="text" name="reg" >
-						<p>Adresas*</p>						
-						<input type="text" name="reg" >
-						<p>Prisijungimo vardas</p>
-						<input type="text" name="password" >
-						<p>Slaptazodis</p>						
-						<input type="text" name="password" >
-						<p>Pakartokite slaptazodi</p>
-						<select>
-						  <option>Mokykla 1</option>
-						  <option>Mokykla 2</option>
-						  <option>Mokykla 3</option>
-						  <option>Mokykla 4</option>
-						  <option>Mokykla 5</option>
-						</select>
-						<select>
-						  <option>Siuvimas</option>
-						  <option>Automechanika</option>
-						  <option>Elektronika</option>
-						  <option>Finansai</option>
-						  <option>Keramika</option>
-						  <option>Dizainas</option>
-						</select>						
-						<select>
-						  <option>1 kursas</option>
-						  <option>2 kursas</option>
-						  <option>3 kursas</option>
-						  <option>4 kursas</option>
-						</select>
-						<input type="text" name="reg" >
-						<p>Telefono numeris*</p>
-						<input type="text" name="reg" >
-						<p>Elektroninis pastas*</p>
-					</div>
-
-					<div class="school-inputs pretty-scrollbar">
-						<input type="text" name="reg" >
-						<p>Pavadinimas*</p>
-						<input type="text" name="reg" >
-						<p>Telefono numeris*</p>
-						<input type="text" name="reg" >
-						<p>Elektroninis pastas*</p>
-						<input type="text" name="reg" >
-						<p>Adresas</p>
-						<input type="text" name="reg" >
-						<p>Tinklapis</p>						
-						<input type="text" name="reg" >
-						<p>Prisijungimo vardas</p>
-						<input type="text" name="password" >
-						<p>Slaptazodis</p>						
-						<input type="text" name="password" >
-						<p>Pakartokite slaptazodi</p>
-					</div>
-
-					<button type="button">PATVIRTINTI REGISTRACIJA</button>
-				</div>
-			</div>
-		</div>
-
 	</div>
-	<div class="logo-n-search">
-		<div class="logo-container">
-			<div class="logo">
-				<%= link_to image_tag('menu/logo.png'), {action: 'index', controller: 'welcome'} %>
+</div>
+
+<div id="online">
+	<div class="menu">
+		<div class="nav">
+			<div class="nav-elements">
+				<ul>
+					<li><a>ISIMINTI PROFILIAI</a></li>
+					<li><a>PAIESKOS ISTORIJA</a></li>
+					<li><a>ZINUTES</a></li>
+					<li><a>VERTINIMAS</a></li>
+					<li class="pop-up-text"><a id="my-profile">MANO PROFILIS</a></li>
+					<li class="pop-up-text"><a id="log-off">ATSIJUNGTI</a></li>
+				</ul>
 			</div>
+
+			<span class="popup-button login-button profile"><%= image_tag('pop-up-icon.png') %></span>
+			<span class="popup-button reg-button log-out"><%= image_tag('pop-up-icon.png') %></span>
 		</div>
-		<div class="search-container">
-			<div class="search">
-				<!-- <%= image_tag 'menu/search-icon.png' %> -->
-				<input type="text" name="search" placeholder="Search..">
+		<div class="logo-n-search">
+			<div class="logo-container">
+				<div class="logo">
+					<%= link_to image_tag('menu/logo.png'), {action: 'index', controller: 'welcome'} %>
+				</div>
+			</div>
+			<div class="search-container">
+				<div class="search">
+					<input type="text" name="search" placeholder="Search..">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -146,6 +180,17 @@
 
 <script type="text/javascript">
 $(function() {
+	$('#log-in').click(function() { 
+		$('#offline').css('display', 'none');
+		$('#online').css('display', 'block');
+		closeLogin();
+	});
+
+	$('#log-off').click(function() { 
+		$('#online').css('display', 'none');
+		$('#offline').css('display', 'block');
+	});
+
 	// hover start --->
 	$('#log-pop').hover(function() {
 		$('.login-button').children().css('height', '75px');
@@ -157,6 +202,18 @@ $(function() {
 		$('.reg-button').children().css('height', '75px');
   }, function() {
     $('.reg-button').children().css('height', '60px');
+  });
+
+  $('#log-off').hover(function() {
+		$('.log-out').children().css('height', '75px');
+  }, function() {
+    $('.log-out').children().css('height', '60px');
+  });
+
+  $('#my-profile').hover(function() {
+		$('.profile').children().css('height', '75px');
+  }, function() {
+    $('.profile').children().css('height', '60px');
   });
   // hover end <---
 
@@ -174,6 +231,10 @@ $(function() {
   });
 
   $('#suspend-log').click(function() { 
+  	closeLogin();
+  });
+
+  function closeLogin(){
   	$('#login-block').animate({width: '0'}, "slow");
   	setTimeout(function(){
 		  $('#login-banner').children().slideToggle("slow");
@@ -182,7 +243,7 @@ $(function() {
 				$('#suspend-log').css('display', 'none');
 			}, 500);
 		}, 500);
-  });
+  }
   // login end <--
 
   // reg start -->

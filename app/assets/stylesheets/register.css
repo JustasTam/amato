@@ -147,3 +147,11 @@
   margin-left: 65px;
   margin-top: 10px;
 }
+
+#online {
+	display: none;
+}
+
+#offline {
+	display: block;
+}

@@ -1,17 +1,36 @@
+<div id="suspend"></div>
+
 <div class="menu">
 	<div class="nav">
 		<div class="nav-elements">
 			<ul>
-				<li><a href='#'>ISIMINTI PROFILIAI</a></li>
+				<!-- <li><a href='#'>ISIMINTI PROFILIAI</a></li>
 				<li><a href='#'>PAIESKOS ISTORIJA</a></li>
 				<li><a href='#'>ZINUTES</a></li>
-				<li><a href='#'>VERTINIMAS</a></li>
-				<li class="pop-up-text"><a href='#' id="log-pop">PRISIJUNGTI</a></li>
-				<li class="pop-up-text"><a href='#' id="reg-pop">REGISTRUOTIS</a></li>
+				<li><a href='#'>VERTINIMAS</a></li> -->
+				<li class="pop-up-text"><a id="log-pop">PRISIJUNGTI</a></li>
+				<li class="pop-up-text"><a id="reg-pop">REGISTRUOTIS</a></li>
 			</ul>
 		</div>
+
 		<span class="popup-button login-button"><%= image_tag('pop-up-icon.png') %></span>
+		<div class="login-field">
+			<div id="login-banner">
+				<%= image_tag('login/banner.png') %>
+			</div>
+			<div id="login-block">
+				<div class="login-inputs">
+					<input type="text" name="login" >
+					<p>Prisijungimo vardas</p>
+					<input type="text" name="password" >
+					<p>Slaptazodis</p>
+					<button type="button">Prisijungti!</button>
+				</div>
+			</div>
+		</div>
+
 		<span class="popup-button reg-button"><%= image_tag('pop-up-icon.png') %></span>
+
 	</div>
 	<div class="logo-n-search">
 		<div class="logo-container">
@@ -30,6 +49,7 @@
 
 <script type="text/javascript">
 $(function() {
+	// hover start --->
 	$('#log-pop').hover(function() {
 		$('.login-button').children().css('height', '75px');
   }, function() {
@@ -41,5 +61,32 @@ $(function() {
   }, function() {
     $('.reg-button').children().css('height', '60px');
   });
+  // hover end <---
+
+  // login start -->
+  $("#login-block").children().hide(); 
+
+  $('#log-pop').click(function() { 
+  	$('#suspend').css('display', 'block');
+  	$('#login-banner').children().slideToggle("slow");
+
+  	setTimeout(function(){
+		  $('#login-block').animate({width: '300px'}, "slow");
+  		$("#login-block").children().show(); 
+		}, 500);
+  });
+  // login end <--
+
+  $('#suspend').click(function() { 
+  	$('#login-block').animate({width: '0'}, "slow");
+  	setTimeout(function(){
+		  $('#login-banner').children().slideToggle("slow");
+		  $("#login-block").children().hide();
+			setTimeout(function(){
+				$('#suspend').css('display', 'none');
+			}, 500);
+		}, 500);
+  });
+
  });
 </script>

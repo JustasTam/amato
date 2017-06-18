@@ -21,7 +21,9 @@
 	  </div>
     <div class="main-mobile">
       <%= render 'partials/mobile_menu' %>
-      <%= render 'partials/mobile' %>
+        <div class="mobile-body">
+          <%= yield %>
+        </div>
     </div>
   </body>
 </html>

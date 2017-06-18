@@ -59,6 +59,14 @@
   padding-left: 10px;
   padding-right: 10px;
   min-width: 330px;
+  height: calc(100% - 150px);
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.mobile-body::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
 
 /* SEARCH */

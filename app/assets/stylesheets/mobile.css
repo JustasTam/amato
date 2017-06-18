@@ -1,5 +1,48 @@
 .mobile-container {
+	/*border: red solid;*/
 	width: 100%;
+	height: 130px;
+	position: absolute;
+	min-width: 400px;
+}
+
+.mobile-logo {
+	margin-top: -5px;
+}
+
+.mobile-meniu {
+	/*border: red solid;*/
+	width: 99%;
+	bottom: 0;
 	height: 50px;
-	border: red solid;
+	position: absolute;
+	background-color: #FFFFFF;
+  border-style: dashed;
+  border-color: black;
+  border-width: 2px;
+  display: inline-block;
+}
+
+.mobile-meniu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-meniu li {
+	display: inline;
+	width: 13%;
+	height: 100%;
+	float: left;
+  margin-left: 12px;
+}
+
+.meniu-item img {
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 60%;
+  width: 70%;
 }

@@ -1,4 +1,37 @@
 <div class="mobile-container">
-	
-
+	<center class="mobile-logo"><%= link_to image_tag('menu/logo.png'), {action: 'index', controller: 'welcome'} %></center>
+	<div class="mobile-meniu">
+		<ul>
+			<li class="meniu-item">
+				<a href="/clothes/index" id="clothes-button">
+					<%= image_tag @submenu_clothes_icon ? 'submenu/clothes-active.png' : 'submenu/clothes.png'%>
+				</a>
+			</li>
+			<li class="meniu-item">
+				<a href="/stroikes/index">
+					<%= image_tag @submenu_stroikes_icon ? 'submenu/stroikes-active.png' : 'submenu/stroikes.png'%>
+				</a>
+			</li>
+			<li class="meniu-item">
+				<a href="/hair/index">
+					<%= image_tag @submenu_hair_icon ? 'submenu/hair-active.png' : 'submenu/hair.png'%>
+				</a>
+			</li>
+			<li class="meniu-item">
+				<a href="/food/index">
+					<%= image_tag @submenu_food_icon ? 'submenu/food-active.png' : 'submenu/food.png'%>
+				</a>
+			</li>
+			<li class="meniu-item">
+				<a href="/garden/index">
+					<%= image_tag @submenu_garden_icon ? 'submenu/garden-active.png' : 'submenu/garden.png'%>
+				</a>
+			</li>
+			<li class="meniu-item">
+				<a href="/mechanik/index">
+					<%= image_tag @submenu_mechanik_icon ? 'submenu/mechanik-active.png' : 'submenu/mechanik.png'%>
+				</a>
+			</li>
+		</ul>
+	</div>
 </div>

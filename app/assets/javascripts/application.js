@@ -13,26 +13,3 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-
-$(function(){
-
-	$('#my-profile').click(function(){
-		$('#school-row').css('display', 'none');
-		$('#student-row').css('display', 'none');	
-		$('#school-admin-row').css('display', 'block');
-		
-		setTimeout(function(){
-			// $('#school-row').css('display', 'none');
-
-			// $('#needs-margin').css('margin-top', '30px');
-			// $('#student-elements').css('display', 'block');
-			// $('.el-row').css('height', '25%');
-			// $('.el-field').css('overflow-y', 'scroll');
-			// $('#student-more').css('display', 'none');
-
-			// $('#student-row').animate({height: '520px'}, "slow");
-		}, 300);
-	});
-
-
-});

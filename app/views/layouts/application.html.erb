@@ -20,3 +20,19 @@
 	  </div>
   </body>
 </html>
+
+<script type="text/javascript">
+$(function(){
+  $('#my-profile').click(function(){
+    $('#school-row').css('display', 'none');
+    $('#student-row').css('display', 'none'); 
+    $('#school-admin-row').css('display', 'block');
+  });
+
+  $('#log-off').click(function(){
+    $('#school-admin-row').css('display', 'none');
+    $('#school-row').css('display', 'block');
+    $('#student-row').css('display', 'block'); 
+  });
+});
+</script>

@@ -59,9 +59,9 @@
   padding-left: 10px;
   padding-right: 10px;
   min-width: 330px;
-  height: calc(100% - 150px);
+/*  height: calc(100% - 150px);
   overflow: scroll;
-  overflow-x: hidden;
+  overflow-x: hidden;*/
 }
 
 .mobile-body::-webkit-scrollbar {
@@ -112,3 +112,40 @@
 	height: 100%;
 	width: 100%;
 }
+
+/* TABS */
+
+.tabs {
+	height: calc(100vh - 220px);
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.tabs::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+.tab-button {
+	height: 40px;
+  width: 47%;
+  background-color: #BCD0C4;
+  float: left;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  position: absolute;
+}
+
+.tab-body {
+  top: 40px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #BCD0C4;
+  padding-top: 10px;
+}
+/*
+.tab-body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}*/

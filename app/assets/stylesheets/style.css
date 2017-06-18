@@ -4,6 +4,10 @@ body {
 	height: 100vh;
 }
 
+.main-mobile {
+	display: none;
+}
+
 * {
   font-family: Calibri, sans-serif;
 }
@@ -12,4 +16,14 @@ body {
 	min-height: 500px;
 	min-width: 1080px;
 	margin-top: -20px;
+}
+
+@media screen and (max-width: 400px) {
+  .main {
+    display: none;
+  }
+
+  .main-mobile {
+  	display: block;
+  }
 }

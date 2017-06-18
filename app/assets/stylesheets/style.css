@@ -18,12 +18,13 @@ body {
 	margin-top: -20px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   .main {
     display: none;
   }
 
   .main-mobile {
   	display: block;
+  	width: 100%;
   }
 }

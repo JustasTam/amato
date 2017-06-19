@@ -6,6 +6,13 @@
 	min-width: 350px;
 }
 
+.main-mobile-content {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
 /* NAVIGATION */
 
 .mobile-logo {
@@ -98,7 +105,7 @@
 .mobile-row {
 	width: 100%;
 	height: 110px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 .mobile-square-container {
@@ -109,7 +116,7 @@
 }
 
 .mobile-square-container img {
-	height: 100%;
+	height: 90%;
 	width: 100%;
 }
 
@@ -119,6 +126,8 @@
 	height: calc(100vh - 220px);
   overflow: scroll;
   overflow-x: hidden;
+  top: 40px;
+  position: relative;
 }
 
 .tabs::-webkit-scrollbar {
@@ -134,18 +143,35 @@
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
   position: absolute;
+  cursor: pointer;
+}
+
+.tab-button h3 {
+	margin-top: 12px;
+	color: #141722;
+}
+
+.unactive {
+	background-color: #eaf7ef;
+}
+
+.unactive h3 {
+	color: #BCD0C4;
 }
 
 .tab-body {
-  top: 40px;
-  position: relative;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #BCD0C4;
-  padding-top: 10px;
+	position: relative;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #BCD0C4;
+	padding-top: 10px;
+	padding-bottom: 20px;
 }
-/*
-.tab-body::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}*/
+
+.student-tab-content {
+	display: block;
+}
+
+.school-tab-content {
+	display: none;
+}

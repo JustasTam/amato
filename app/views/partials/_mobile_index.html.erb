@@ -3,18 +3,32 @@
 </div>
 
 
-<div class="tabs">
-	<div class="tab-button">
-		
-	</div>
+<div class="tab-button student-tab-button">
+	<center><h3>STUDENTAI</h3></center>
+</div>
 
-	<div class="tab-button" style="right: 10px">
-		
-	</div>
+<div class="tab-button unactive school-tab-button" style="right: 10px">
+	<center><h3>MOKYKLOS</h3></center>
+</div>
 
 
+<div class="tabs student-tab-content">
 	<div class="tab-body">
 		
+		<div class="mobile-row">
+			<div class="mobile-square-container">
+				<%= link_to image_tag('avatar.png'), user_path %>
+			</div>
+			<span style="width: 5%;float: left; height: 100%;"></span>
+			<div class="mobile-square-container">
+				<%= link_to image_tag('avatar.png'), user_path %>
+			</div>
+			<span style="width: 5%;float: left; height: 100%;"></span>
+			<div class="mobile-square-container">
+				<%= link_to image_tag('avatar.png'), user_path %>
+			</div>
+		</div>			
+
 		<div class="mobile-row">
 			<div class="mobile-square-container">
 				<%= link_to image_tag('avatar.png'), user_path %>
@@ -98,17 +112,85 @@
 				<%= link_to image_tag('avatar.png'), user_path %>
 			</div>
 		</div>		
-
 	</div>
+</div>
 
+<div class="tabs school-tab-content">
+	<div class="tab-body">
+		
+		<div class="mobile-row">
+			<div class="mobile-square-container">
+				<%= link_to image_tag('school-icon.png'), user_path %>
+			</div>
+			<span style="width: 5%;float: left; height: 100%;"></span>
+			<div class="mobile-square-container">
+				<%= link_to image_tag('school-icon.png'), user_path %>
+			</div>
+			<span style="width: 5%;float: left; height: 100%;"></span>
+			<div class="mobile-square-container">
+				<%= link_to image_tag('school-icon.png'), user_path %>
+			</div>
+		</div>		
 
+		<div class="mobile-row">
+			<div class="mobile-square-container">
+				<%= link_to image_tag('school-icon.png'), user_path %>
+			</div>
+			<span style="width: 5%;float: left; height: 100%;"></span>
+			<div class="mobile-square-container">
+				<%= link_to image_tag('school-icon.png'), user_path %>
+			</div>
+			<span style="width: 5%;float: left; height: 100%;"></span>
+			<div class="mobile-square-container">
+				<%= link_to image_tag('school-icon.png'), user_path %>
+			</div>
+		</div>			
+
+		<div class="mobile-row">
+			<div class="mobile-square-container">
+				<%= link_to image_tag('school-icon.png'), user_path %>
+			</div>
+			<span style="width: 5%;float: left; height: 100%;"></span>
+			<div class="mobile-square-container">
+				<%= link_to image_tag('school-icon.png'), user_path %>
+			</div>
+			<span style="width: 5%;float: left; height: 100%;"></span>
+			<div class="mobile-square-container">
+				<%= link_to image_tag('school-icon.png'), user_path %>
+			</div>
+		</div>		
+	</div>
+</div>
+
+<script>
+$(function() {
+	$('.student-tab-button, .school-tab-button').unbind('click');
+
+	$('.student-tab-button').click(function(){
+		if ($('.student-tab-button').hasClass('unactive')) {
+			$('.student-tab-content').css('display', 'block');
+			$('.student-tab-button').removeClass('unactive');
+			$('.school-tab-content').css('display', 'none');
+			$('.school-tab-button').addClass('unactive');
+		} 
+	});
+
+	$('.school-tab-button').click(function(){
+		if ($('.school-tab-button').hasClass('unactive')) {
+			$('.school-tab-content').css('display', 'block');
+			$('.school-tab-button').removeClass('unactive');
+			$('.student-tab-content').css('display', 'none');
+			$('.student-tab-button').addClass('unactive');
+		} 
+	});
+});
+</script>
 
 <!-- 	<div id="school-tab">
 	</div>
 
 	<div id="student-tab">
 	</div> -->
-</div>
 
 
 

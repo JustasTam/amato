@@ -1,0 +1,23 @@
+<div class="inner-mobile-meniu-container">
+	<div class="back">
+		<a href="javascript: history.back(1)" id="backLink">
+			<%= image_tag('login/triangle.png') %>
+		</a>
+	</div>
+	<center><%= link_to image_tag('menu/logo.png'), {action: 'index', controller: 'welcome'} %></center>
+</div>
+
+<div class="inner-mobile-personal-info-container">
+	<div class="mobile-personal-photo"><%= image_tag('avatar.png') %></div>
+	<div class="mobile-personal-data pretty-scrollbar">
+		<ul>
+			<li>Vardas Pavarde</li>
+			<li>Profesine mokykla</li>
+			<li>Studijuojamas kursas</li>
+			<li>Specialybe</li>
+			<li>Tel numeris</li>
+			<li>El. pastas</li>
+			<li>Adresas</li>
+		</ul>
+	</div>
+</div>

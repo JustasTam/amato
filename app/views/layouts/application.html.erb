@@ -19,17 +19,29 @@
 	    	<%= yield %>
 	    </div>
 	  </div>
-    <div class="main-mobile main-mobile-content">
+    <div class="main-mobile main-mobile-content index-mobile">
       <%= render 'partials/mobile_menu' %>
-        <div class="mobile-body">
-          <%= yield %>
-        </div>
+      <div class="mobile-body"> <%= yield %> </div>
+    </div>
+
+    <div class="main-mobile inner-mobile-pages">
+      <%= render 'partials/inner_mobile_menu' %>
     </div>
   </body>
 </html>
 
 <script type="text/javascript">
 $(function(){
+  if (($(window).width() + window.innerWidth-$(window).width()) <= 430) {
+    if (document.location.pathname == '/user/index' || document.location.pathname == '/school/index') {
+      $('.inner-mobile-pages').css('display', 'block');
+      $('.index-mobile').css('display', 'none');
+    } else {
+      $('.inner-mobile-pages').css('display', 'none');
+      $('.index-mobile').css('display', 'block');
+    }
+  }
+
   $('#my-profile').click(function(){
     $('#school-row').css('display', 'none');
     $('#student-row').css('display', 'none'); 

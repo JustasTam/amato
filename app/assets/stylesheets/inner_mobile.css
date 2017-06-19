@@ -71,3 +71,35 @@
   color: #BCD0C4;
   padding-bottom: 3px;
 }
+
+.inner-tabs {
+  position: relative;
+  top: 55px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.inner-tabs .tab-body {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 70px;
+}
+
+.inner-tabs .mobile-row {
+	height: 140px;
+}
+
+.foto-square-container {
+	height: 100%;
+  width: 45%;
+  float: left;
+}
+
+.foto-square-container img {
+	height: 100%;
+}
+
+.inner-tabs .tab-body h3 {
+	color: #141722;
+}

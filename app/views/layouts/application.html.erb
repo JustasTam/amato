@@ -53,5 +53,27 @@ $(function(){
     $('#school-row').css('display', 'block');
     $('#student-row').css('display', 'block'); 
   });
+
+
+  // TABS
+  $('.student-tab-button, .school-tab-button').unbind('click');
+
+  $('.student-tab-button').click(function(){
+    if ($('.student-tab-button').hasClass('unactive')) {
+      $('.student-tab-content').css('display', 'block');
+      $('.student-tab-button').removeClass('unactive');
+      $('.school-tab-content').css('display', 'none');
+      $('.school-tab-button').addClass('unactive');
+    } 
+  });
+
+  $('.school-tab-button').click(function(){
+    if ($('.school-tab-button').hasClass('unactive')) {
+      $('.school-tab-content').css('display', 'block');
+      $('.school-tab-button').removeClass('unactive');
+      $('.student-tab-content').css('display', 'none');
+      $('.student-tab-button').addClass('unactive');
+    } 
+  });
 });
 </script>

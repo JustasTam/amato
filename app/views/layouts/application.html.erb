@@ -12,7 +12,7 @@
   </head>
 
   <body>
-  	<div class="main">
+  	<div class="main resolution-fix">
 	  	<%= render 'partials/menu' %>
 	  	<div class="container">
 				<%= render 'partials/submenu' %>
@@ -25,7 +25,12 @@
     </div>
 
     <div class="main-mobile inner-mobile-pages">
-      <%= render 'partials/inner_mobile_menu' %>
+      <div class="inner-user">
+        <%= render 'partials/inner_mobile_menu' %>
+      </div>
+      <div class="inner-school">
+        <%= render 'partials/inner_mobile_menu_school' %>
+      </div>
     </div>
   </body>
 </html>
@@ -33,6 +38,17 @@
 <script type="text/javascript">
 $(function(){
   if (($(window).width() + window.innerWidth-$(window).width()) <= 430) {
+
+    if (document.location.pathname == '/user/index') {
+      $('.inner-user').css('display', 'block');
+      $('.inner-school').css('display', 'none');
+    }    
+
+    if (document.location.pathname == '/school/index') {
+      $('.inner-user').css('display', 'none');
+      $('.inner-school').css('display', 'block');
+    }
+
     if (document.location.pathname == '/user/index' || document.location.pathname == '/school/index') {
       $('.inner-mobile-pages').css('display', 'block');
       $('.index-mobile').css('display', 'none');

@@ -1,3 +1,10 @@
+.resolution-fix {
+  min-width: 1452px !important;
+  min-height: 726px !important;
+  max-width: 1452px !important;
+  max-height: 726px !important;
+}
+
 body {
 	margin: 0 !important;
 	background-color: #141722;

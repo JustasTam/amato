@@ -209,7 +209,7 @@
   height: 11px;
   width: 22px;
   position: absolute;
-  margin-top: -23px;
+  /*margin-top: -23px;*/
   left: 57%;
 }
 
@@ -239,7 +239,7 @@
 	height: 11px;
   width: 22px;
   position: absolute;
-  margin-top: -270px;
+  margin-top: -256px;
   left: 57%;
 }
 

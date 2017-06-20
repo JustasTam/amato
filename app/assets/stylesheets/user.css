@@ -1,18 +1,21 @@
 .profile-img {
-	height: 75%;
-	width: 20%;
-	margin-top: 30px;
-	background-image: url(avatar.png);
-	background-size: 100% 100%;
-	float: left;
+    height: 200px;
+    width: 200px;
+    margin-top: 30px;
+    background-image: url(avatar.png);
+    background-size: 100% 100%;
+    float: left;
+    position: absolute;
 }
 
 .profile-info {
-	height: 75%;
-	width: 22%;
-	margin-top: 30px;
-	margin-left: 30px;
-	float: left;
+height: 75%;
+    width: 22%;
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+    position: relative;
+    left: 200px;
 }
 
 .profile-info ul {
@@ -27,12 +30,14 @@
 }
 
 .profile-description {
-	height: 75%;
-	width: 30%;
-	margin-top: 30px;
-	margin-left: 50px;
-	float: left;
-	background-color: #DEEBE1;
+    height: 200px;
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 50px;
+    float: left;
+    background-color: #DEEBE1;
+    left: 125px;
+    position: relative;
 }
 
 .profile-description p {
@@ -44,11 +49,13 @@
 }
 
 .profile-stars {
-	height: 75%;
-	width: 32px;
-	margin-top: 30px;
-	margin-left: 70px;
-	float: left;
+    height: 75%;
+    width: 32px;
+    margin-top: 30px;
+    margin-left: 70px;
+    float: left;
+    position: relative;
+    left: 100px;
 }
 
 .stars-ul {
